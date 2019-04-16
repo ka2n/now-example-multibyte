@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "multibyte",
+    "builds": [
+        { "src": "package.json", "use": "@now/next" }
+    ],
+    "routes": [
+      {"src": "/_/(.*)", "dest": "show?v=$1", "headers": { "x-request-path": "/show?v=$1"}}
+    ]
+}
